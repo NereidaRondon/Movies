@@ -5,7 +5,7 @@ export default function Card(){
 
     return(
         <>
-        
+        <div className="card--container">
         <div className="card text-bg-dark ">
             <img className="card-img" src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/theavengers_lob_crd_03.jpg"  alt="Avengers movie poster"/>
 
@@ -44,7 +44,7 @@ export default function Card(){
                 <p classNAme="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
-
+        </div>
 
         </>
     );
