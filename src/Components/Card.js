@@ -1,5 +1,6 @@
 //import React, {useState} from 'react';
 import './App.css';
+import Stars from './Stars';
 
 export default function Card(){
 
@@ -12,7 +13,8 @@ export default function Card(){
             <div className="card-body">
                 <h5 className="card-title">Avengers</h5>
                 <p className="card-text">Released 2012</p>
-                <p className="card-text">⭐⭐⭐⭐⭐</p>
+                <Stars />
+                
             </div>
             <div className="card-body card-area">
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -25,7 +27,7 @@ export default function Card(){
             <div className="card-body card-area">
                 <h5 className="card-title">Avengers: Infinity War</h5>
                 <p className="card-text">Released 2018</p>
-                <p className="card-text">⭐⭐⭐⭐⭐</p>
+                <Stars />
             </div>
             <div className="card-body">
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -38,10 +40,11 @@ export default function Card(){
             <div className="card-body card-area">
                 <h5 className="card-title">Avengers: End Game</h5>
                 <p className="card-text">Released 2019</p>
-                <p className="card-text">⭐⭐⭐⭐⭐</p>
+                <Stars />
+                
             </div>
             <div className="card-body">
-                <p classNAme="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
         </div>

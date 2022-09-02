@@ -1,6 +1,13 @@
 body{
   background-color: rgb(108, 117, 125);
 }
+.Stars{
+  font-family: sans-serif;
+  text-align: center;
+}
+.logo{
+  margin:0 0 0 10px;
+}
 .App {
   display: flex;
   flex-direction: column;

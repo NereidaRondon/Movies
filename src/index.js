@@ -6,6 +6,7 @@ import Nav from './Components/Nav';
 import App from './Components/App';
 //import Counter from './Counter';
 import Card from './Components/Card'
+import Stars from './Components/Stars';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

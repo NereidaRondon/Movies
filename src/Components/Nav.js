@@ -5,7 +5,7 @@ export default function Nav(){
 
         <nav>
             <div className="header--bar">
-            <a href="https://www.marvel.com/" ><img src="https://theculturednerd.org/wp-content/uploads/2020/11/marvel-logo.jpg" width="200"/></a> 
+            <a href="https://www.marvel.com/" ><img className="logo" src="https://theculturednerd.org/wp-content/uploads/2020/11/marvel-logo.jpg" width="200"/></a> 
             </div>
             <ul className="nav text-bg-secondary nav-justified">
                 <li className="nav-item">
