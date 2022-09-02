@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          MCU Movie Reviews
+          
         </h1>
       </header>
     </div>
