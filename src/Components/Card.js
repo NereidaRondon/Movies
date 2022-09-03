@@ -14,9 +14,7 @@ export default function Card(){
                 <h5 className="card-title">Avengers</h5>
                 <p className="card-text">Released 2012</p>
                 <Stars />
-                
-            </div>
-            <div className="card-body card-area">
+                <br></br>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
@@ -24,12 +22,11 @@ export default function Card(){
         <div className="card text-bg-dark ">
             <img className="card-img" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg"/>
 
-            <div className="card-body card-area">
+            <div className="card-body">
                 <h5 className="card-title">Avengers: Infinity War</h5>
                 <p className="card-text">Released 2018</p>
                 <Stars />
-            </div>
-            <div className="card-body">
+                <br></br>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
@@ -37,13 +34,11 @@ export default function Card(){
         <div className="card text-bg-dark ">
             <img className="card-img" src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg"/>
 
-            <div className="card-body card-area">
+            <div className="card-body">
                 <h5 className="card-title">Avengers: End Game</h5>
                 <p className="card-text">Released 2019</p>
                 <Stars />
-                
-            </div>
-            <div className="card-body">
+                <br></br>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
         </div>
