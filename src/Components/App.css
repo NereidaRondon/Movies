@@ -71,9 +71,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-h1.count{
-  padding: 0 10px;
-}
+
 .card-img{
   width:20rem;
   height: auto;
