@@ -4,7 +4,10 @@ import Nav from './Nav';
 import Hero from './Hero';
 import Movie from './Movie';
 import list from './MovieList';
-//import Movie from './MovieList';
+import Stars from './Stars';
+//import Review from './Review';
+//import ReviewForm from './ReviewForm';
+//import ReviewList from './ReviewList';
 
 //<img src={logo} className="App-logo" alt="logo" />
 
