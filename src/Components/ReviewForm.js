@@ -8,7 +8,7 @@ import './App.css';
 
 
 
-export default function ReviewForm(){
+export default function ReviewForm(props){
     const [addBtn, setAddBtn] = useState(true);
     const [form, setForm]= useState(false);
 
@@ -42,44 +42,51 @@ export default function ReviewForm(){
         ]
         );
         
-    const review= useRef(null);    
-        
+    const user = useRef(null);  
+    const review = useRef(null);     
+    let starsNum=[];
+
     const ratingChanged = (newRating) => {
         console.log(`rating: ${newRating}⭐`);
-        // let newRate =  `${newRating}⭐`;
-        // return newRate;
+        let myRating = `${newRating}⭐`;
+        starsNum.push(myRating);
     }
     
-    // console.log(this.newRate);
-
     function clickSave(){
         console.log(`saved!`);
-        console.log(review.current.value);
+        console.log(starsNum[0]);
         setReviewList(current => [...current, {
-                item: `${review.current.value}`, 
-                rating: '5⭐'
+                user: user.current.value,
+                item: review.current.value, 
+                rating: starsNum[0]
             }
-        ]); 
-            console.log(reviewList);
+        ]);
+        user.current.value = '';
+        review.current.value = '';
+        starsNum=[];
     }
     
-    
-
     const [allReviews, setAllReviews]= useState(false);
 
     function readReviews(){
         setAllReviews(true);
+        setAddBtn(false);
     }
     function closeReviews(){
         setAllReviews(false);
+        setAddBtn(true);
     }
 
     function ReviewList(){    
         const itemList = reviewList.map((review) => (
             <>
-            <li className="review--list">{review.item} 
-            <br></br><span className="rating">Rating:</span> {review.rating}</li>
             <hr></hr>
+            <li className="review--list">
+                <span className="user">{review.user}:</span>
+                <br></br>
+                {review.item} 
+                <br></br>
+                <span className="rating">Rating:</span> {review.rating}</li>
             </>
         ));
         
@@ -95,12 +102,19 @@ export default function ReviewForm(){
     return(
         <>
             {addBtn && ( 
-            <div>
-                <button type="button" className="btn btn-secondary" onClick={handleClick}>Add a Review</button>
-                
-                <button type="button" className="btn btn-link" onClick={readReviews}>Read Reviews</button>
-            </div>
-            )}          
+                 
+                <div className="rev--buttons d-grid gap-2">
+                    <button type="button" className="btn btn-outline-danger read--btn" onClick={readReviews}>Read Reviews</button>
+
+                    <button type="button" className="btn btn-outline-light" onClick={handleClick}>Add a Review</button>
+                </div>
+            )}
+            {allReviews && ( 
+                <div className="rev--buttons d-grid gap-2">
+                    <button type="button" className="btn btn-danger close--reviews" onClick={closeReviews}>Close Reviews</button>
+                </div>    
+            )}    
+                     
             
             {form && ( 
             
@@ -108,6 +122,15 @@ export default function ReviewForm(){
                     <div className="row">
 
                     </div>
+                    <div className="input-group">
+                        <input
+                        type="text"
+                        ref={user} 
+                        className="form-control" 
+                        placeholder="Your name"  
+                        />
+                    </div>
+                    <br></br>
                     <div className="input-group">
                         <textarea
                         type="text"
@@ -134,13 +157,14 @@ export default function ReviewForm(){
 
             {allReviews && (
                 <div>
-
+                  
                     <div>
-                        <h3 className="title">Reviews:</h3>
+                        <h5 className="title">Movie Reviews</h5>
+                    </div>
+                    <div>
                         <ReviewList />
                     </div>
 
-                    <button type="button" className="btn btn-danger" onClick={closeReviews}>Close Reviews</button>
                     
                 </div>
             )}                 
